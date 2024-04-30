@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      class="flex flex-col justify-around items-center h-screen w-full overflow-scroll"
+    >
+      <h4 class="font-montserrat text-3xl text-center">
+        Car Classification Application
+      </h4>
+
+      <div class="flex -space-x-2 m-4">
+        <a href="#" class="">
+          <img
+            class="inline-block h-20 w-20 rounded-full object-cover ring-2 ring-white"
+            src="https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/images/car-reviews/first-drives/legacy/rolls_royce_phantom_top_10.jpg?itok=XjL9f1tx"
+            alt="Guy"
+          />
+        </a>
+        <a href="#" class="">
+          <img
+            class="inline-block h-20 w-20 rounded-full object-cover ring-2 ring-white"
+            src="https://imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/2020-Chevrolet-Corvette-Stingray/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&width=960"
+            alt="Max"
+          />
+        </a>
+        <a href="#" class="">
+          <img
+            class="inline-block h-20 w-20 rounded-full object-cover ring-2 ring-white"
+            src="https://imageio.forbes.com/specials-images/imageserve/6064c6802c761b99a89d1f21/0x0.jpg?format=jpg&crop=2375,1336,x0,y120,safe&height=600&width=1200&fit=bounds"
+            alt="Charles"
+          />
+        </a>
+        <a href="#" class="">
+          <img
+            class="inline-block h-20 w-20 rounded-full object-cover ring-2 ring-white"
+            src="https://www.kbb.com/wp-content/uploads/2022/08/2022-mercedes-amg-eqs-front-left-3qtr.jpg"
+            alt="Jade"
+          />
+        </a>
+      </div>
+
+      <h3 class="font-montserrat text-xl text-center rtl text-right w-1/2 m-4">
+        في البداية قمنا بعمل معالجة بالشكل اللازم على البيانات حيث قمنا بحذف
+        الأعمدة غير الضرورية من البيانات والتخلص من القيم الفارغة بالشكل المناسب
+        حيث استبدلنا القيم الفارغة بكل عمود بالقيم الأكثر تكراراً في ذاك العمود.
+        وفي النهاية تم تحويل القيم النصية إلى قيم رقمية للتعامل معها
+      </h3>
+
+      <div
+        class="inline-flex items-center bg-white leading-none ${props.textColor} rounded-full p-2 shadow text-teal text-sm m-4"
+      >
+        <span
+          class="inline-flex bg-gray-700 text-white rounded-full h-6 px-3 justify-center items-center"
+        >
+          Results
+        </span>
+        <span class="inline-flex px-2 text-gray-700"> Web Data Mining. </span>
+      </div>
+      <table class="table p-4 bg-white rounded-lg shadow">
+        <thead>
+          <tr>
+            <th
+              class="border p-4 dark:border-dark-5 whitespace-nowrap font-normal text-gray-900"
+            >
+              Algorithm
+            </th>
+            <th
+              class="border p-4 dark:border-dark-5 whitespace-nowrap font-normal text-gray-900"
+            >
+              accuracy
+            </th>
+            <th
+              class="border p-4 dark:border-dark-5 whitespace-nowrap font-normal text-gray-900"
+            >
+              precision
+            </th>
+            <th
+              class="border p-4 dark:border-dark-5 whitespace-nowrap font-normal text-gray-900"
+            >
+              recall
+            </th>
+            <th
+              class="border p-4 dark:border-dark-5 whitespace-nowrap font-normal text-gray-900"
+            >
+              F1
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="text-gray-700">
+            <td class="border p-4 dark:border-dark-5">logistic regression</td>
+            <td class="border p-4 dark:border-dark-5">0.492492</td>
+            <td class="border p-4 dark:border-dark-5">0.413708</td>
+            <td class="border p-4 dark:border-dark-5">0.285452</td>
+            <td class="border p-4 dark:border-dark-5">0.307844</td>
+          </tr>
+          <tr class="text-gray-700">
+            <td class="border p-4 dark:border-dark-5">decision tree</td>
+            <td class="border p-4 dark:border-dark-5">0.729221</td>
+            <td class="border p-4 dark:border-dark-5">0.638484</td>
+            <td class="border p-4 dark:border-dark-5">0.644133</td>
+            <td class="border p-4 dark:border-dark-5">0.641205</td>
+          </tr>
+          <tr class="text-gray-700">
+            <td class="border p-4 dark:border-dark-5">Naive Bayes</td>
+            <td class="border p-4 dark:border-dark-5">0.059548</td>
+            <td class="border p-4 dark:border-dark-5">0.220553</td>
+            <td class="border p-4 dark:border-dark-5">0.220513</td>
+            <td class="border p-4 dark:border-dark-5">0.082755</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 class="font-montserrat text-xl text-center rtl text-right w-1/2 m-4">
+        <span>Decisiion Tree</span>
+        وبعد المقارنة بين كل النماذج تبين الآتي: أن نموذج هو الأفضل وذلك لعدة
+        أسباب منها أن النموذج أعقد وبالتالي قادر على تحقيق نتيجة أفضل وأن
+        النموذج أفضل للبيانات غير الخطية ولا يتأثر بالعناصر الشاذة
+        وأيضاً لا يتأثر بالميزات الغير مهمة على عكس النماذج الأخرى
+      </h3>
+    </div>
+  </body>
+</html>
